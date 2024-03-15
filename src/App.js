@@ -1,6 +1,22 @@
 import logo from "./logo.svg";
-import React from "react";
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import "./App.css";
+// import { useState } from "react";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link,
+//   Switch,
+// } from "react-router-dom";
+// import SignUpPage from "./Components/SignupPage";
+// import About from "./Components/About";
 import main from "./Assets/main.mp4";
 import Rectangle from "./Assets/Rectangle.png";
 import Frame1 from "./Assets/Frame1.png";
@@ -18,7 +34,12 @@ import f2 from "./Assets/f2.png";
 import f3 from "./Assets/f3.png";
 import f4 from "./Assets/f4.png";
 import f5 from "./Assets/f5.png";
-function App() {
+import s1 from "./Assets/s1.png";
+import s2 from "./Assets/s2.png";
+
+// import About from "./Components/About";
+
+const Home = () => {
   return (
     <div>
       <header className="App-header">
@@ -38,10 +59,8 @@ function App() {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <div className="auth-buttons">
-            <span>Sign Up</span>
-            {/* <button>Sign Up</button> */}
-          </div>
+
+          {/* This is the alias of BrowserRouter i.e. Router */}
         </nav>
       </header>
       <div className="slider">
@@ -142,6 +161,133 @@ function App() {
       </div>
 
       {/* <img src={f2} alt="" className="f2" /> */}
+    </div>
+  );
+};
+
+const SignUp = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    phone: "",
+    city: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+  };
+  return (
+    <div className="fullbg" style={{ background: "black" }}>
+      <div className="signup_portal" style={{ background: "black" }}>
+        <div className="form-container">
+          {/* <h2>Contact Form</h2> */}
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label className="form-label1" htmlFor="firstName"></label>
+              <input
+                className="form-input1"
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="First Name"
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label2" htmlFor="lastName"></label>
+              <input
+                className="form-input2"
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Last Name"
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label" htmlFor="username"></label>
+              <input
+                className="form-input3"
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                placeholder="Username"
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label" htmlFor="email"></label>
+              <input
+                className="form-input4"
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label" htmlFor="phone"></label>
+              <input
+                className="form-input5"
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label" htmlFor="city"></label>
+              <input
+                className="form-input6"
+                type="text"
+                id="city"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                placeholder="City/Locality:"
+              />
+            </div>
+            <button type="submit" className="form-button">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div className="Sign-up">
+          <h2>Sign-Up</h2>
+        </div>
+        <div className="sign-img">
+          <img src={s1} className="s1" alt="" />
+        </div>
+      </div>
+      <div className="imageofsign">
+        <img className="s2" src={s2} alt="" />
+      </div>
+    </div>
+  );
+};
+
+// import SignUpPage from "./Components/SignupPage";
+function App() {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
     </div>
   );
 }
