@@ -397,5 +397,221 @@ h1 span {
   /* padding: -50px; Adjust padding as needed */
   z-index: 1; /* Ensure the heading is above other content */
 }
+.footer-heading {
+  position: absolute;
+  background-color: white;
+  /* Remove or adjust the top property as needed */
+  top: 2425px;
+  display: flex;
+  height: 650px;
+  width: 1519px;
+  /* Remove overflow properties if not needed */
+  /* overflow-y: hidden; */
+  /* overflow-x: hidden; */
+}
 
+.f1 {
+  position: relative;
+  top: 1080px;
+  left: 50px;
+  height: 600px;
+  left: 180px;
+}
+.f1 {
+  position: relative;
+  top: 45px;
+  left: 50px;
+  /* height: 600px; */
+  left: 180px;
+}
+.f2 {
+  position: relative;
+  top: 50px;
+  left: 20px;
+  height: 120px;
+  left: 180px;
+  width: 650px;
+  padding-left: 55px;
+  /* margin-right: 150px; */
+}
 /* Adjust other styles as needed */
+.f3 {
+  position: relative;
+  top: 230px;
+  left: -415px; /* Position the image to the extreme left */
+  height: 45px;
+  width: 340px;
+  /* padding-left: -55px; */
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Define transition properties with cubic-bezier timing function */
+}
+.f3:hover {
+  transform: translateY(5px); /* Lift up the image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow */
+  width: 355px; /* Increase width */
+  height: 55px; /* Increase height */
+  cursor: pointer;
+}
+/* .f4 {
+  position: relative;
+  top: 50px;
+  left: -200px;
+  height: 20px;
+  left: 180px;
+  width: 10px;
+  /* padding-left: 55px; */
+
+/* .f5 {
+  position: relative;
+  top: 550px;
+  right: -50px; /* Position the image to the extreme left */
+/* height: 75px;
+  width: 350px;
+} */
+/* .footer {
+  position: relative;
+  display: inline-block;
+}
+.footer-heading {
+  background-color: #f9f6f6;
+  position: relative;
+  top: 2000px;
+} */
+.f5 {
+  position: relative;
+  height: 75px;
+  top: 520px;
+  left: -750px;
+  width: 350px;
+}
+/* Define keyframes for the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the images */
+.f2,
+.f1,
+.f3,
+.f5 {
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeInUp 0.8s ease forwards; /* Apply animation */
+}
+
+/* Delay each image's animation to create a staggered effect */
+.f1 {
+  animation-delay: 0.2s;
+}
+
+.f2 {
+  animation-delay: 0.4s;
+}
+
+.f3 {
+  animation-delay: 0.6s;
+}
+.f5 {
+  animation-delay: 0.8s;
+}
+.last {
+  /* border: 3px solid green; */
+  background-color: #171010;
+  position: relative;
+  top: 1640px;
+  display: inline-block;
+  width: 1516px;
+  height: 600px;
+  font-family: "Neue Regular", sans-serif;
+}
+.big-cont1 {
+  color: white;
+  font-size: 35px;
+  position: relative;
+  z-index: 999;
+  top: 70px;
+  left: 180px;
+  font-family: "Neue Regular", sans-serif;
+}
+.big-cont2 {
+  color: white;
+  font-size: 35px;
+  position: relative;
+  z-index: 999;
+  top: -173px;
+  left: 500px;
+  font-family: "Neue Regular", sans-serif;
+}
+.big-cont3 {
+  color: white;
+  font-size: 35px;
+  position: relative;
+  z-index: 999;
+  top: -110px;
+  left: 175px;
+  font-family: "Neue Regular", sans-serif;
+}
+.big-cont4 {
+  color: white;
+  font-size: 35px;
+  position: relative;
+  z-index: 999;
+  top: -270px;
+  left: 500px;
+  font-family: "Neue Regular", sans-serif;
+}
+.insidebc1 {
+  font-size: 20px;
+  position: relative;
+  left: -40px;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 40px;
+  top: -10px;
+  font-family: "Neue Regular", sans-serif;
+}
+.insidebc2 {
+  font-size: 20px;
+  position: relative;
+  left: -40px;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 40px;
+  top: -10px;
+  font-family: "Neue Regular", sans-serif;
+}
+.insidebc3 {
+  font-size: 20px;
+  position: relative;
+  left: -40px;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 40px;
+  top: -10px;
+  font-family: "Neue Regular", sans-serif;
+}
+.insidebc4 {
+  font-size: 20px;
+  position: relative;
+  left: -40px;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 40px;
+  top: -10px;
+  font-family: "Neue Regular", sans-serif;
+}
+.insidebc1:hover,
+.insidebc2:hover,
+.insidebc3:hover,
+.insidebc4:hover {
+  cursor: pointer;
+  text-decoration: underline white;
+}

@@ -13,6 +13,11 @@ import w3 from "./Assets/w3.png";
 import w4 from "./Assets/w4.png";
 import w5 from "./Assets/w5.png";
 import w6 from "./Assets/w6.png";
+import f1 from "./Assets/f1.png";
+import f2 from "./Assets/f2.png";
+import f3 from "./Assets/f3.png";
+import f4 from "./Assets/f4.png";
+import f5 from "./Assets/f5.png";
 function App() {
   return (
     <div>
@@ -34,7 +39,7 @@ function App() {
             </li>
           </ul>
           <div className="auth-buttons">
-            <span>Sign In</span>
+            <span>Sign Up</span>
             {/* <button>Sign Up</button> */}
           </div>
         </nav>
@@ -89,6 +94,54 @@ function App() {
           </div>
         </div>
       </div>
+      <section>
+        <div className="footer">
+          <div className="footer-heading">
+            <img src={f1} alt="" className="f1" />
+            <img src={f2} alt="" className="f2" />
+            <img src={f3} alt="" className="f3" />
+            {/* <img src={f4} alt="" className="f4" /> */}
+            {/* <hr /> */}
+            <img src={f5} alt="" className="f5" />
+          </div>
+        </div>
+      </section>
+      <div className="last">
+        {/* <ContactForm /> */}
+        <div className="big-cont1">
+          Site
+          <ul className="insidebc1">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div className="big-cont2">
+          Social
+          <ul className="insidebc2">
+            <li>Instagram</li>
+            <li>LinkedIn</li>
+            <li>Facebook</li>
+          </ul>
+        </div>
+        <div className="big-cont3">
+          Legal
+          <ul className="insidebc3">
+            <li>Privacy</li>
+            <li>Terms of Condition</li>
+          </ul>
+        </div>
+        <div className="big-cont4">
+          Contact{" "}
+          <ul className="insidebc4">
+            <li>Casa@gmail.com</li>
+            <li>Whatsapp</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* <img src={f2} alt="" className="f2" /> */}
     </div>
   );
 }
