@@ -262,7 +262,8 @@ const SignUp = () => {
               />
             </div>
             <button type="submit" className="form-button">
-              Submit
+              Sign Up
+              {/*  */}
             </button>
           </form>
         </div>
@@ -274,7 +275,7 @@ const SignUp = () => {
         </div>
       </div>
       <div className="imageofsign">
-        <img className="s2" src={s2} alt="" />
+        {/* <img className="s2" src={s2} alt="" /> */}
       </div>
     </div>
   );
