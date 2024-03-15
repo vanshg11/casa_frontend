@@ -73,14 +73,17 @@ function App() {
         </div>
       </div>
       <div className="whatwedo">
-        <img src={Rectangle} alt="" className="thirdrect" />
+        {/* <img src={Rectangle} alt="" className="fiirdrect" /> */}
+        {/* <img src={Rectangle} alt="" className="thirdrect" /> */}
         <div className="whatwedo-heading">
+          <img src={Rectangle} alt="" className="fiirdrect" />
+
           <h2 className="what">What We Do</h2>
           <div className="instance1">
             <img src={w1} alt="" className="w1" />
             <img src={w2} alt="" className="w2" />
             <img src={w3} alt="" className="w3" />
-            <img src={w4} alt="" className="w4" />
+            {/* <img src={w4} alt="" className="w4" /> */}
             <img src={w5} alt="" className="w5" />
             <img src={w6} alt="" className="w6" />
           </div>
